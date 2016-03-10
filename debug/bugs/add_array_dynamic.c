@@ -14,6 +14,7 @@ int add_array(int *a, int *b, int n){
 int main(int argc, char **argv) {
   int *a, *b;
   int n = 3;
+# reservo memoria para a y b
   a = malloc(sizeof(int) * 3);
   b = malloc(sizeof(int) * 3);
   int i, sum;

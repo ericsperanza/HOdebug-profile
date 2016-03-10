@@ -1,11 +1,11 @@
 .PHONY: default help object executable all clean segfault dynamic static nobugs
-CC = gcc
+CC = gcc -g -o0
 
 LD = $(CC)
 
 SOURCE_C = $(wildcard *.c)
 OBJECTS_C = $(patsubst %.c, %_c.o, $(SOURCE_C))
-EXECUTABLES = $(patsubst %.c, %.e, $(SOURCE_C))
+EXECUTABLES = $(patsubst  %.c, %.e, $(SOURCE_C))
 
 default: all
 
